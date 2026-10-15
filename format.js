@@ -9,10 +9,8 @@ export function formatBrief(d){
  const lines=[`Customer Name: ${d.name||''}`,`Address: ${d.address||''}`,`Phone Number: ${d.phone||''}`,`Email: ${d.email||''}`,'',`Type: ${d.type}`,'General:',`  Phases: ${d.phases}`,`  Inverter: ${d.inverterQty} * ${d.inverter||''} - ${Number(d.phases)===2?1:d.phases}P - ${has(d.inverterSize)?decimal(d.inverterSize):'…'}kW`];
  if(d.extras?.length)lines.push(`  Extras Included: ${d.extras.join(', ')}`);
  lines.push(`  Payment Method: ${d.payment||''}`);
- const loan=solar&&d.eligible==='true'&&d.loan==='true'?Number(d.loanAmount)||0:0;
  const deposit=Number(d.deposit)||0;let payable=money(d.total);
- if(loan)payable+=` (${money(Number(d.total)-loan)} excl. SV Loan)`;
- if(deposit)payable+=` (${money(Number(d.total)-loan-deposit)} remaining)`;
+ if(deposit)payable+=` (${money(Number(d.total)-deposit)} remaining)`;
  lines.push(`  Total Payable: ${payable}`,`  Deposit: ${money(deposit)}`);
  if(d.billsType==='month'){lines.push('  Bills (Month):');for(const m of months)if(has(d['bill'+m]))lines.push(`    ${m}: ${money(d['bill'+m])}`);}
  if(d.billsType==='quarter')lines.push('  Bills (Quarter):',`    Period: ${d.periodStart} - ${quarterEnd(d.periodStart)}`,`    Amount: ${money(d.billQuarter)}`);

@@ -1,11 +1,11 @@
 /* Bump VERSION whenever any app asset changes. Each release is cached atomically.
  * New versions wait for open tabs to close, avoiding mixed old/new scripts. */
-const VERSION = 'v3';
+const VERSION = 'v6';
 const BASE = new URL('./', self.location.href);
 const PREFIX = `solar-battery-brief:${BASE.pathname}:`;
 const CACHE = `${PREFIX}${VERSION}`;
 const FILES = ['index.html', 'style.css', 'app.js', 'data.js', 'format.js',
-  'pwa.js', 'deposit.js', 'combobox.js', 'manifest.webmanifest', 'icons/icon-192.png',
+  'pwa.js', 'attachments.js', 'zip.js', 'deposit.js', 'combobox.js', 'manifest.webmanifest', 'icons/icon-192.png',
   'icons/icon-512.png', 'icons/maskable-512.png', 'icons/apple-touch-icon.png'];
 const URLS = FILES.map(file => new URL(file, BASE).href);
 

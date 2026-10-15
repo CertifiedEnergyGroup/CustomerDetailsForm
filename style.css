@@ -6,3 +6,14 @@ input:disabled{background:#f3f6f1;color:#6c7d73;cursor:not-allowed}
 .combobox-popup [role=option]{padding:11px 12px;border-radius:4px;cursor:pointer;overflow-wrap:anywhere;line-height:1.5}
 .combobox-popup [role=option]:hover,.combobox-popup [aria-selected=true]{background:#eaf2e9}
 .combobox-empty{padding:12px;color:#6c7d73;font-size:12px}
+
+.attachment-zone{border:2px dashed #bfd0c1;background:#f8faf6;min-height:150px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:24px;text-align:center;transition:background .15s,border-color .15s}
+.attachment-zone span:last-child{font-size:12px;color:#6c7d73;font-weight:400}.attachment-zone .attachment-icon{font-size:26px;font-weight:400;color:#537367}
+.attachment-zone:hover,.attachment-zone.dragover{border-color:#285c46;background:#eaf2e9}.attachment-zone:focus-visible{outline:2px solid #285c46;outline-offset:3px}
+.attachment-zone:disabled{opacity:.6;cursor:wait}.attachment-message{font-size:12px;color:#9b563f;overflow-wrap:anywhere}
+.attachment-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:15px}.attachment-card{border:1px solid #dce4da;border-radius:8px;overflow:hidden;min-width:0;background:#fff}
+.attachment-preview{height:180px;background:#eef2eb;position:relative;display:grid;place-items:center;isolation:isolate}.attachment-fallback{position:absolute;color:#6c7d73;font-size:14px;z-index:-1}
+.attachment-preview img,.attachment-preview video,.attachment-preview iframe{width:100%;height:100%;border:0;display:block;background:#eef2eb;object-fit:contain}
+.attachment-info{padding:12px;display:flex;flex-direction:column;gap:7px}.attachment-name{font-size:12px;font-weight:650;overflow-wrap:anywhere}.attachment-info small{font-size:11px;color:#6c7d73}
+.attachment-actions{display:flex;justify-content:space-between;align-items:center;gap:10px}.attachment-actions a{font-size:12px;color:#365e4c;text-decoration:underline}.attachment-actions button{padding:5px 8px;font-size:11px}
+button:disabled{cursor:wait;opacity:.65}

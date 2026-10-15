@@ -70,14 +70,14 @@ export const batteries = [
         model: "(TBC) EP Cube2 AS Battery Module",
     },
     {
-        brand: "Guangdong Sofar Smart Solar Technology Co Ltd",
+        brand: "Sofar Solar",
         size: 4992,
         model: "BTS 5K",
     },
-    { brand: "FOXESS Co Ltd", size: 7020, model: "CQ7(W)" },
-    { brand: "GoodWe Technologies Co Ltd", size: 3200, model: "LX F3.2-H-20" },
+    { brand: "FOXESS", size: 7020, model: "CQ7(W)" },
+    { brand: "GoodWe", size: 3200, model: "LX F3.2-H-20" },
     {
-        brand: "GoodWe Technologies Co Ltd",
+        brand: "GoodWe",
         size: 8300,
         model: "GW8.3-BAT-D-G20",
     },
